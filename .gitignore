@@ -1,0 +1,16 @@
+.metadata/
+*/target/
+
+# Compiled class file
+*.class
+
+#maven files
+.mvn/*
+*/mvnw
+*/mvnw.cmd
+
+.classpath
+.factorypath
+.project
+
+.settings/

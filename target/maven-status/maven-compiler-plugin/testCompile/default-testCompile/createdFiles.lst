@@ -1,0 +1,4 @@
+com\solera\app\utils\Utils.class
+com\solera\app\utils\TestProperties.class
+com\solera\app\icon\IconTest.class
+com\solera\app\behavior\MainPage.class
