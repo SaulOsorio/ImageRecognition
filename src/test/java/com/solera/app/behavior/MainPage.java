@@ -35,14 +35,18 @@ public class MainPage {
 		cookieButton.click();
 	}
 	
-	public static void findSoleraIcon(Screen screen, WebDriver driver, float similarity) throws FindFailed {
+	public static void findSoleraIcon(Screen screen, WebDriver driver, float similarity) throws FindFailed, Exception {
 		Pattern icon = new Pattern(properties.getProperty("soleraicon"));
+		String id = properties.getProperty("soleraiconcenterid");
+		new WebDriverWait(driver,5).until(ExpectedConditions.elementToBeClickable(By.id(id)));
 		try {
 		screen.find(icon.similar((float)similarity));}
 		catch(FindFailed findFailure){
 			LOGGER.error(findFailure.getMessage());
 			Utils.teardown(driver);
 			throw findFailure;
+		}catch(Exception e){
+			throw e;
 		}
 	}
 }

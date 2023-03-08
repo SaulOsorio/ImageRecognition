@@ -12,7 +12,8 @@ public class IconTest {
 	private static Properties properties= TestProperties.getProperties();
 	
 	@Test
-	public void iconTest() throws Exception{	
+	public void iconTest() throws Exception{
+			org.apache.log4j.BasicConfigurator.configure();
 			Screen screen = new Screen();
 			Float similarityThreshold = Float.valueOf(properties.getProperty("similaritythreshold"));
 			WebDriver driver = Utils.setup("chrome");
